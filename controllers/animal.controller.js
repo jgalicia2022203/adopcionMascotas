@@ -3,7 +3,7 @@ const { response } = require("express");
 
 const animalsGet = async (req, res = response) => {
   const { limite, desde } = req.query;
-  const query = { estado: true };
+  const query = { estadoAdopcion: "Disponible" };
 
   const [total, animals] = await Promise.all([
     Animal.countDocuments(query),
@@ -31,7 +31,7 @@ const putAnimals = async (req, res = response) => {
 
   const animal = await Animal.findByIdAndUpdate(id, resto);
 
-  response.status(200).json({
+  res.status(200).json({
     msg: "Animal Actualizado Exitosamente!!",
     animal,
   });
@@ -39,7 +39,11 @@ const putAnimals = async (req, res = response) => {
 
 const animalsDelete = async (req, res) => {
   const { id } = req.params;
-  const animal = await Animal.findByIdAndUpdate(id, { estado: false });
+  const animal = await Animal.findByIdAndUpdate(
+    id,
+    { estadoAdopcion: "Adoptado" },
+    { new: true }
+  );
 
   res.status(200).json({
     msg: "Animal eliminado exitosamente!!",
@@ -50,24 +54,22 @@ const animalsDelete = async (req, res) => {
 const animalsPost = async (req, res) => {
   const {
     nombre,
-    especie,
-    raza,
+    tipo,
     edad,
-    sexo,
-    peso,
-    propietario,
-    contactoPropietario,
+    genero,
+    descripcion,
+    vacunasYCuidados,
+    requisitosAdopcion,
   } = req.body;
 
   const animal = new Animal({
     nombre,
-    especie,
-    raza,
+    tipo,
     edad,
-    sexo,
-    peso,
-    propietario,
-    contactoPropietario,
+    genero,
+    descripcion,
+    vacunasYCuidados,
+    requisitosAdopcion,
   });
 
   await animal.save();

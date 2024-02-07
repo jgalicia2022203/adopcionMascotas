@@ -5,37 +5,32 @@ const AnimalSchema = Schema({
     type: String,
     required: [true, "El nombre es obligatorio"],
   },
-
-  especie: {
+  tipo: {
     type: String,
-    required: [true, "La especie es obligatoria"],
+    required: [true, "El tipo de animal es obligatorio"],
   },
-
-  raza: {
-    type: String,
-    required: [true, "La raza es obligatoria"],
-  },
-
   edad: {
     type: String,
     required: [true, "La edad es obligatoria"],
   },
-
-  sexo: {
+  genero: {
     type: String,
-    required: [true, "El sexo es obligatorio"],
+    required: [true, "El género es obligatorio"],
   },
-  peso: {
+  descripcion: {
     type: String,
-    required: [true, "El peso es obligatorio"],
+    required: [true, "La descripción es obligatoria"],
   },
-  propietario: {
+  estadoAdopcion: {
     type: String,
-    required: [true, "El nombre del propietario es obligatorio"],
+    enum: ["Disponible", "Reservado", "Adoptado"],
+    default: "Disponible",
   },
-  contactoPropietario: {
+  vacunasYCuidados: {
     type: String,
-    required: [true, "El contacto del propietario es obligatorio"],
+  },
+  requisitosAdopcion: {
+    type: String,
   },
 });
 
