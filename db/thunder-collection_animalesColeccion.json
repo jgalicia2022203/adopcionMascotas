@@ -1,0 +1,100 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "animalesColeccion",
+    "dateExported": "2024-02-07T23:14:09.866Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "1d16beb0-6fb2-4393-8a9c-c5707d458f5c",
+            "colId": "e7705732-af29-43ac-9dc4-aa97b3f7b9a0",
+            "containerId": "",
+            "name": "postAnimals",
+            "url": "http://localhost:3000/api/animals",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-07T21:50:21.399Z",
+            "modified": "2024-02-07T23:12:45.152Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n   \"nombre\": \"Rocker\",\n    \"tipo\": \"Perro\",\n    \"edad\": \"4 años\",\n    \"genero\": \"Macho\",\n    \"descripcion\": \"Rocky es un perro activo y cariñoso que ama jugar al aire libre.\",\n    \"estadoAdopcion\": \"Disponible\",\n    \"vacunasYCuidados\": \"Vacunado, desparasitado y esterilizado.\",\n    \"requisitosAdopcion\": \"Necesita un hogar con una familia activa que le proporcione mucho ejercicio.\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "bbc76a7f-f0db-4b8d-8c36-8d3437d07d39",
+            "colId": "e7705732-af29-43ac-9dc4-aa97b3f7b9a0",
+            "containerId": "",
+            "name": "getAnimals",
+            "url": "http://localhost:3000/api/animals",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-02-07T21:54:50.009Z",
+            "modified": "2024-02-07T22:04:31.903Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "722d7611-899b-4508-893d-45ef2e3f5f3a",
+            "colId": "e7705732-af29-43ac-9dc4-aa97b3f7b9a0",
+            "containerId": "",
+            "name": "getAnimalById",
+            "url": "http://localhost:3000/api/animals?desde=5&limite=5",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-02-07T21:55:38.038Z",
+            "modified": "2024-02-07T22:04:37.056Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "desde",
+                    "value": "5",
+                    "isPath": false
+                },
+                {
+                    "name": "limite",
+                    "value": "5",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "659f7fca-6610-4fb4-b0bc-0fd0187b5017",
+            "colId": "e7705732-af29-43ac-9dc4-aa97b3f7b9a0",
+            "containerId": "",
+            "name": "deleteAnimal",
+            "url": "http://localhost:3000/api/animals/65c407a875e2f4e6088604c8",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-02-07T21:57:53.836Z",
+            "modified": "2024-02-07T23:04:45.323Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "bb0354ba-da6c-465a-bc42-8f9b1d6f323c",
+            "colId": "e7705732-af29-43ac-9dc4-aa97b3f7b9a0",
+            "containerId": "",
+            "name": "putAnimal",
+            "url": "http://localhost:3000/api/animals/65c40dd42e8cbf6bbe56cc3c",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2024-02-07T23:01:28.729Z",
+            "modified": "2024-02-07T23:11:41.490Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n   \"nombre\": \"Rocky\",\n    \"tipo\": \"Perro\",\n    \"edad\": \"4 años\",\n    \"genero\": \"Macho\",\n    \"descripcion\": \"Rocky es un perro activo y cariñoso que ama jugar al aire libre.\",\n    \"estadoAdopcion\": \"Disponible\",\n    \"vacunasYCuidados\": \"Vacunado, desparasitado y esterilizado.\",\n    \"requisitosAdopcion\": \"Necesita un hogar con una familia activa que le proporcione mucho ejercicio.\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
